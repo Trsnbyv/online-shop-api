@@ -11,14 +11,14 @@ const App = () => {
       const savedProducts = localStorage.getItem('products');
 
       if (savedProducts) {
-          setProducts(JSON.parse(savedProducts).splice(0, 28));
+          setProducts(JSON.parse(savedProducts).splice(1, 29));
           setLoading(false);
       } else {
           setTimeout(() => {
               fetch('https://api.escuelajs.co/api/v1/products')
                   .then(response => response.json())
                   .then(data => {
-                      const limitedProducts = data.splice(0, 28);
+                      const limitedProducts = data.splice(1, 29);
                       setProducts(limitedProducts);
                       localStorage.setItem('products', JSON.stringify(limitedProducts));
                       setLoading(false);
