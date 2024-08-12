@@ -1,0 +1,9 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.list-item {
+  width: 300px;
+  background-color: aliceblue;
+  display: flex;
+}
